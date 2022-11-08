@@ -15,10 +15,11 @@ window.addEventListener("load", function() {
 //Play button is clicked
 document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
-	video.play();
 	video = document.querySelector('#player1');
+	document.querySelector('#volume').innerHTML = document.querySelector('#slider').value + "%";
 	video.volume = document.querySelector('#slider').value/100;
 	console.log("Volume is set to " + video.volume);
+	video.play();
 });
 
 //Pause button is clicked
@@ -72,7 +73,6 @@ document.querySelector('#mute').addEventListener("click", function() {
 //Volume Slider
 document.querySelector('#volume').innerHTML = document.querySelector('#slider').value + "%";
 document.querySelector('#slider').oninput = function() {
-	document.querySelector('#volume').innerHTML = document.querySelector('#slider').value + "%";
 	video = document.querySelector('#player1');
 	video.volume = document.querySelector('#slider').value/100;
 };
