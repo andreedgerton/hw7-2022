@@ -17,8 +17,8 @@ document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	video = document.querySelector('#player1');
 	video.volume = document.querySelector('#slider').value/100;
-	video.play();
 	console.log("Volume is set to " + video.volume);
+	video.play();
 });
 
 //Pause button is clicked
