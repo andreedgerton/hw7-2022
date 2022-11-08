@@ -15,10 +15,10 @@ window.addEventListener("load", function() {
 //Play button is clicked
 document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
+	video.play();
 	video = document.querySelector('#player1');
 	video.volume = document.querySelector('#slider').value/100;
 	console.log("Volume is set to " + video.volume);
-	video.play();
 });
 
 //Pause button is clicked
@@ -74,9 +74,7 @@ document.querySelector('#volume').innerHTML = document.querySelector('#slider').
 document.querySelector('#slider').oninput = function() {
 	document.querySelector('#volume').innerHTML = document.querySelector('#slider').value + "%";
 	video = document.querySelector('#player1');
-	if(video.playing) {
-		video.volume = document.querySelector('#slider').value/100;
-	}
+	video.volume = document.querySelector('#slider').value/100;
 };
 
 //Old School
