@@ -74,7 +74,7 @@ document.querySelector('#mute').addEventListener("click", function() {
 document.querySelector('#volume').innerHTML = document.querySelector('#slider').value + "%";
 document.querySelector('#slider').oninput = function() {
 	video = document.querySelector('#player1');
-	video.volume = document.querySelector('#slider').value/100;
+	document.querySelector('#volume').innerHTML = document.querySelector('#slider').value + "%";
 };
 
 //Old School
