@@ -71,10 +71,10 @@ document.querySelector('#mute').addEventListener("click", function() {
 });
 
 //Volume Slider
-document.querySelector('#volume').innerHTML = document.querySelector('#slider').value + "%";
 document.querySelector('#slider').oninput = function() {
 	video = document.querySelector('#player1');
 	document.querySelector('#volume').innerHTML = document.querySelector('#slider').value + "%";
+	video.volume = document.querySelector('#slider').value/100;
 };
 
 //Old School
